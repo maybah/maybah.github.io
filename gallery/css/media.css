@@ -1,0 +1,27 @@
+@media (max-height: 768px)  {
+.item {
+	width: calc(100% - 20px);
+	height: calc(95vw / 16 * 9);
+	transition:  3s width, 2s height;  
+}
+}
+
+@media (pointer: fine) {
+
+}
+
+@media (max-height: 480px) {
+.item {
+	border-width: 7px;
+	width: calc(100% - 14px);
+
+}
+.box {
+	width: calc(100% - 14px);
+}
+}
+
+@media (max-width: 480) and (orientation: landscape) {
+
+}
+	

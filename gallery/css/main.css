@@ -1,0 +1,29 @@
+body {
+	margin: 0;
+ }
+
+ .main {
+ 	max-width: 900px;
+ 	margin: auto;
+ 	padding: 35px 0;
+ 	box-sizing: border-box;
+ 	width: calc(100% - 20px);
+ }
+
+.item {
+	background-color: #eee;
+	width: calc(50% - 20px);
+    height: 240px;
+    border: 10px solid red;
+    background-clip: content-box;\
+    background-position: center;
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+   
+
+.box {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
