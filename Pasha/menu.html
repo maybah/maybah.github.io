@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name='viewport' content="width=device-width, initial-scale=1">
+		<title>Brabus.ru</title>
+		<link rel="stylesheet" href="main1.css">
+	</head>
+	<body>
+		<div class="wrapper">
+			<nav class="topnav">
+				<a href="#news" class="nav-link">Новости</a>
+				<a href="#history" class="nav-link">История</a>
+				<a href="#records" class="nav-link">Рекорды</a>
+			</nav>
+		</div>
+		<header class="header">
+			<h1 class="modal-title">Logo-Brabus</h1>
+		</header>
+		<div class="box" id="news">
+			<h2 class="box-title lax" data-lax-preset="fadeIn">Новости</h2>
+			<div class="box-item size2 lax" data-lax-preset="fadeIn" style='background-image: url(pic2.jpg);'>
+				<h3 class="box-item-title">Очень важный заголовок</h3>
+			</div>
+			<div class="box-item size1 lax" data-lax-preset="fadeIn" style='background-image: url(pic2.jpg);'>
+				<h3 class="box-item-title">Очень важный заголовок</h3>
+			</div>
+			<div class="box-item size1 lax" data-lax-preset="fadeIn" style='background-image: url(pic2.jpg);'>
+				<h3 class="box-item-title">Очень важный заголовок</h3>
+			</div>
+			<div class="box-item size1 lax" data-lax-preset="fadeIn" style='background-image: url(pic2.jpg);'>
+				<h3 class="box-item-title">Очень важный заголовок</h3>
+			</div>
+			<div class="box-item size1 lax" data-lax-preset="fadeIn" style='background-image: url(pic2.jpg);'>
+				<h3 class="box-item-title">Очень важный заголовок</h3>
+			</div>
+		</div>
+		<div class="wrapper-box">
+			<div class="box height" id="history">
+				<div class="item-box lax" data-lax-preset="fadeIn">
+					<img src="pic1.jpg">
+					<h2 class="item-title">Создaтель компании</h2>
+					<p class="text text1">Как частное тюнинг-ателье основано в 1977 году Клаусом Бракманом и Бодо Бушманом  в Ботропе.</p>
+					<p class="text text2" style='transition-delay: 0.1s'> Название происходит от сложения начальных букв фамилий её создателей.</p>
+					<p class="text text3" style='transition-delay: 0.2s'> Является крупнейшим в мире независимым тюнинговым ателье.</p>
+				</div>
+				<div class="item-box lax" data-lax-preset="fadeIn">
+					<img src="pic5.jpg">
+					<h2 class="item-title"> Создaтель компании </h2>
+					<p class="text text1">Как частное тюнинг-ателье основано в 1977 году Клаусом Бракманом и Бодо Бушманом  в Ботропе.</p>
+					<p class="text text2" style='transition-delay: 0.1s'> Название происходит от сложения начальных букв фамилий её создателей.</p>
+					<p class="text text3" style='transition-delay: 0.2s'> Является крупнейшим в мире независимым тюнинговым ателье.</p>
+				</div>
+				<div class="item-box lax" data-lax-preset="fadeIn">
+					<img src="pic2.jpg">
+					<h2 class="item-title"> Создaтель компании </h2>
+					<p class="text text1">Как частное тюнинг-ателье основано в 1977 году Клаусом Бракманом и Бодо Бушманом  в Ботропе.</p>
+					<p class="text text2" style='transition-delay: 0.1s'> Название происходит от сложения начальных букв фамилий её создателей.</p>
+					<p class="text text3" style='transition-delay: 0.2s'> Является крупнейшим в мире независимым тюнинговым ателье.</p>
+				</div>
+				<div class="item-box lax" data-lax-preset="fadeIn">
+					<img src="pic4.jpg">
+					<h2 class="item-title"> Создaтель компании </h2>
+					<p class="text text1">Как частное тюнинг-ателье основано в 1977 году Клаусом Бракманом и Бодо Бушманом  в Ботропе.</p>
+					<p class="text text2" style='transition-delay: 0.1s'> Название происходит от сложения начальных букв фамилий её создателей.</p>
+					<p class="text text3" style='transition-delay: 0.2s'> Является крупнейшим в мире независимым тюнинговым ателье.</p>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="box height" id="records"></div> -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+		<script>
+			$(document).ready(function() {
+		
+				$('.nav-link').click(function(event) {
+					var target = $(this).attr('href');
+					$('html, body').animate({scrollTop: $(target).offset().top},1000);
+				});
+				lax.setup() // init
+		const updateLax = () => {
+			lax.update(window.scrollY)
+			window.requestAnimationFrame(updateLax)
+		}
+		window.requestAnimationFrame(updateLax)
+				})
+		</script>
+	</body>
+</html>
